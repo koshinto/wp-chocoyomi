@@ -1,0 +1,19 @@
+{
+  "name": "chocoyomi",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve"
+  },
+  "dependencies": {
+    "swiper": "^8.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
+    "mini-css-extract-plugin": "^2.5.3"
+  }
+}

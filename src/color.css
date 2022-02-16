@@ -1,0 +1,18 @@
+.swiper-slide {
+  color: #40353F;
+  font-weight: bold;
+  text-align: center;
+  line-height: 300px;
+}
+
+.swiper-slide:nth-child(1) {
+  background-color: #FFC5BA;
+}
+
+.swiper-slide:nth-child(2) {
+  background-color: #A9E4F4;
+}
+
+.swiper-slide:nth-child(3) {
+  background-color: #FCC780;
+}
