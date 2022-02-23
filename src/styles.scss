@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+// Documentation https://bulma.io/documentation/
+@import "~bulma/bulma";
+
+// for swiper css
+@import "./color";
+
+$desktop: 960px;
+
+#main {
+  width: $desktop;
+  margin: 0 auto;
+}

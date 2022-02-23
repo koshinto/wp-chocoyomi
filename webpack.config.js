@@ -1,14 +1,22 @@
+/* eslint-disable no-undef */
+const env = process.env.NODE_ENV === 'development' ? 'development' : 'production'
+
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: 'development',
+  mode: env,
   plugins: [new MiniCssExtractPlugin({
     filename: "style.css"
   })],
   entry: `${__dirname}/src/main.js`,
   output: {
-    path: __dirname,
+    path: `${__dirname}/public/`,
     filename: "bundle.js",
+  },
+  watchOptions: {
+    ignored: /node_modules/,
+    aggregateTimeout: 800,
+    poll: 1000,
   },
   devServer: {
     port: 8888,
@@ -28,10 +36,16 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss|css$/i,
         use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader"
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: `${__dirname}/public/`
+            }
+          },
+          "css-loader",
+          "sass-loader"
         ]
       }
     ]

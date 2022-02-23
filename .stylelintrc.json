@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "overrides": [
+    {
+      "files": [ "**/*.scss" ]
+    }
+  ],
+  "rules": {
+    "indentation": 2
+  }
+}

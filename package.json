@@ -4,16 +4,27 @@
   "main": "main.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve"
+    "start": "webpack",
+    "dev": "cross-env NODE_ENV=development webpack --watch",
+    "build": "cross-env NODE_ENV=production webpack",
+    "lint:style": "stylelint '**/*.scss'"
   },
   "dependencies": {
+    "bulma": "^0.9.3",
     "swiper": "^8.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.6.0",
-    "mini-css-extract-plugin": "^2.5.3"
+    "eslint": "^8.9.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.6.0",
+    "stylelint": "^14.5.1",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-scss": "^4.1.0"
   }
 }
